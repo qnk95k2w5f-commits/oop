@@ -1,15 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
-
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
+/**
+ * Main class for the Cinema Ticket Booking System
+ * Demonstrates object creation, data output, and object comparison
+ */
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("=== CINEMA TICKET BOOKING SYSTEM ===\n");
 
 
-  }
-}
+            Movie movie1 = new Movie("The Dark Knight", "Action", 9.0, "Christopher Nolan");
+            Movie movie2 = new Movie("Inception", "Sci-Fi", 8.8, "Christopher Nolan");
+
+            movie1.displayInfo();
+            System.out.println();
+            movie2.displayInfo();
+            System.out.println();
+
+
+            Viewer viewer1 = new Viewer("John Smith", 25,  true, "+7756231547");
+            Viewer viewer2 = new Viewer("Sarah Johnson", 17,  false, "8956215478");
+
+            viewer1.displayInfo();
+            System.out.println();
+            viewer2.displayInfo();
+            System.out.println();
+
+
+            Cinema cinema1 = new Cinema("Galaxy Cinemas", "Downtown Mall", 2500);
+            Cinema cinema2 = new Cinema("Star Theater", "West Side Plaza", 1200);
+
+            cinema1.displayInfo();
+            System.out.println();
+            cinema2.displayInfo();
+            System.out.println();
+        }
+    }
