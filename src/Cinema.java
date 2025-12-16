@@ -1,30 +1,41 @@
 public class Cinema {
-
-    private String name;
-    private String location;
-    private int capacity;
-
-    public Cinema(String name, String location, int capacity) {
-        this.name = name;
-        this.location = location;
-        this.capacity = capacity;
+    private String nazvanie;
+    private String adres;
+    private int vmestimost;
+    
+    public Cinema(String n, String a, int v) {
+        nazvanie = n;
+        adres = a;
+        vmestimost = v;
     }
-
-
-    public String getName() {
-        return name;
+    
+    public String getNazvanie() {
+        return nazvanie;
     }
-
-    public String getLocation() {
-        return location;
+    
+    public String getAdres() {
+        return adres;
     }
-    public int getCapacity() {
-        return capacity;
+    
+    public int getVmestimost() {
+        return vmestimost;
     }
-
-    public void displayInfo() {
-        System.out.println("Кинотеатр: " + name);
-        System.out.println("Место: " + location);
-        System.out.println("Вместимость: " + capacity);
+    
+    public void setNazvanie(String n) {
+        nazvanie = n;
+    }
+    
+    public void setAdres(String a) {
+        adres = a;
+    }
+    
+    public void setVmestimost(int v) {
+        vmestimost = v;
+    }
+    
+    public void pokazat() {
+        System.out.println("Кинотеатр: " + nazvanie);
+        System.out.println("Адрес: " + adres);
+        System.out.println("Мест: " + vmestimost);
     }
 }
