@@ -1,43 +1,58 @@
 public class Movie {
-    private String title;
-    private String genre;
-    private double rating;
-    private String author;
-
-
-    public Movie(String title, String genre, double rating, String author) {
-        this.title = title;
-        this.genre = genre;
-        this.rating = rating;
-        this.author = author;
+    private String nazvanie;
+    private String ganr;
+    private double rejting;
+    private String avtor;
+    
+    public Movie(String n, String g, double r, String a) {
+        nazvanie = n;
+        ganr = g;
+        rejting = r;
+        avtor = a;
     }
-
-
-    public String getTitle() {
-        return title;
+    
+    public String getNazvanie() {
+        return nazvanie;
     }
-
-    public String getGenre() {
-        return genre;
+    
+    public String getGanr() {
+        return ganr;
     }
-
-    public double getRating() {
-        return rating;
+    
+    public double getRejting() {
+        return rejting;
     }
-    public String getAuthor() {
-        return author;
+    
+    public String getAvtor() {
+        return avtor;
     }
-
-    public boolean isHighlyRated() {
-        return rating >= 7.0;
+    
+    public void setNazvanie(String n) {
+        nazvanie = n;
     }
-
-
-    public void displayInfo() {
-        System.out.println("Фильм: " + title);
-        System.out.println("Жанр: " + genre);
-        System.out.println("Автор: " + author);
-        System.out.println("Рейтинг: " + rating + "/10");
-        System.out.println("Высоко оценён: " + (isHighlyRated() ? "Да" : "Нет"));
+    
+    public void setGanr(String g) {
+        ganr = g;
+    }
+    
+    public void setRejting(double r) {
+        rejting = r;
+    }
+    
+    public void setAvtor(String a) {
+        avtor = a;
+    }
+    
+    public void pokazat() {
+        System.out.println("Фильм: " + nazvanie);
+        System.out.println("Жанр: " + ganr);
+        System.out.println("Режиссер: " + avtor);
+        System.out.println("Рейтинг: " + rejting + "/10");
+        
+        if (rejting >= 7.0) {
+            System.out.println("Высокий рейтинг: Да");
+        } else {
+            System.out.println("Высокий рейтинг: Нет");
+        }
     }
 }
