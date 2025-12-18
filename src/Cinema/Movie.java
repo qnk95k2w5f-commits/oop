@@ -1,3 +1,4 @@
+package Cinema;
 public class Movie {
     private String nazvanie;
     private String ganr;

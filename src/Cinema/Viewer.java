@@ -1,3 +1,5 @@
+package Cinema;
+
 public class Viewer {
     private String imya;
     private int vozrast;
